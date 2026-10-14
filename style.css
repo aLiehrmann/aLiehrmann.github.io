@@ -1,0 +1,44 @@
+/* Mise en page générale */
+html { font-family: "Liberation Serif", Times, serif; font-size: 1em; }
+body { line-height: 1.4; padding: 1em; margin-left: 130px; max-width: 60em; background: #fff; color: #222; font-size: 16px; }
+h1, h2, h3 { line-height: 1.2; }
+a { color: #00007f; overflow-wrap: anywhere; }
+dt { float: left; clear: left; width: 8em; font-weight: bold; }
+dd { margin: 0 0 0 8.5em; padding: 0 0 0.5em; }
+.leftnav { width: 100px; position: fixed; z-index: 1000; top: 10px; left: 20px; overflow-x: hidden; padding: 1px 0; line-height: 1.6; }
+
+/* Photo */
+.photo { width: 180px; height: auto; float: right; margin: 20px 20px 0; }
+
+/* Ligne entre les grandes parties, comme dans le CV */
+hr { clear: both; border: 0; border-top: 1px solid #bbb; margin: 2em 0 0; }
+hr + h2 { margin-top: 0.9em; }
+
+/* Intertitres « Showcasing… » repliables, sans JavaScript */
+details { margin: 1.2em 0; }
+summary { cursor: pointer; color: #00007f; }
+summary h3 { display: inline; }
+summary:hover h3, summary:focus-visible h3 { text-decoration: underline; }
+details[open] > summary { margin-bottom: 1em; }
+
+/* Listes et entrées du CV */
+dl.wide dt { width: 15em; }
+dl.wide dd { margin-left: 15.5em; }
+dd ul { margin: 0.2em 0 0; padding-left: 1.5em; }
+.label { margin-bottom: 0.2em; }
+.label + ul { margin-top: 0; }
+.aside { font-size: 16px; font-weight: normal; }
+.pub { margin: 0 0 1em; }
+.pub p { margin: 0; padding-left: 2em; text-indent: -2em; }
+.pub ul { margin: 0.2em 0 0; padding-left: 3.5em; }
+
+/* Téléphone : menu en ligne en haut, dates au-dessus du texte */
+@media (max-width: 700px) {
+  body { margin-left: 0; }
+  .leftnav { position: static; width: auto; padding: 0; }
+  .leftnav p { display: inline; margin: 0 0.8em 0 0; }
+  .photo { width: 120px; margin: 0 0 0.5em 1em; }
+  dt, dl.wide dt { float: none; width: auto; }
+  dd, dl.wide dd { margin-left: 1em; }
+  .pub ul { padding-left: 2.5em; }
+}
